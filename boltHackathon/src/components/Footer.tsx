@@ -92,21 +92,34 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} World's Largest Hackathon. All rights reserved.
-          </p>
-          <div className="mt-4 md:mt-0 flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-              Code of Conduct
-            </a>
-          </div>
-        </div>
+  <p className="text-gray-400 text-sm">
+    &copy; {new Date().getFullYear()} World's Largest Hackathon. All rights reserved.
+  </p>
+  <a
+    href="https://bolt.new"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center mt-2 text-gray-400 hover:text-blue-400 transition-colors text-sm"
+  >
+    <img
+      src="https://bolt.new/built-with-bolt-badge.svg"
+      alt="Built with Bolt.new"
+      className="h-6 mr-2"
+    />
+    Built with Bolt.new
+  </a>
+  <div className="mt-4 md:mt-0 flex space-x-6">
+    <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+      Privacy Policy
+    </a>
+    <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+      Terms of Service
+    </a>
+    <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+      Code of Conduct
+    </a>
+  </div>
+</div>
       </div>
     </footer>
   );
