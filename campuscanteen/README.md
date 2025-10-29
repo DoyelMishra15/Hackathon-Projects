@@ -20,12 +20,21 @@ It allows users to enter their name, choose an item from the menu, specify the q
 ```
 campuscanteen/
 │
-├── app.py
-├── static/
-│ └── style.css
-└── templates/
-  └──index.html
-  └──confirmation.html
+├── backend/
+│   ├── app.py
+│   └── requirements.txt
+│
+└── frontend/
+    ├── package.json
+    ├── src/
+    │   ├── App.jsx
+    │   ├── components/
+    │   │   ├── OrderForm.jsx
+    │   │   └── Confirmation.jsx
+    │   └── index.css
+    └── public/
+        └── index.html
+
 ```
 
 ---
