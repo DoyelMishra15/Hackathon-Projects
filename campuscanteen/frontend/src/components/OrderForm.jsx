@@ -19,10 +19,17 @@ export default function OrderForm({ setOrderData }) {
         body: JSON.stringify(form)
       })
 
+      if (!res.ok) {
+        // show status for easier debugging
+        const text = await res.text()
+        throw new Error(`HTTP ${res.status}: ${text}`)
+      }
+
       const data = await res.json()
       setOrderData(data)
     } catch (err) {
-      alert('Error placing order! Please check your backend.')
+      console.error('Order error:', err)
+      alert('Error placing order! Please check your backend. (See console for details)')
     } finally {
       setLoading(false)
     }
