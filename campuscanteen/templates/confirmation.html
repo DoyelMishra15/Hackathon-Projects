@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Order Confirmation</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Order Confirmed!</h1>
-    <p>Thank you, {{ name }}.</p>
-    <p>You ordered {{ quantity }} x {{ item }}.</p>
-    <p>Your Order ID is <strong>{{ order_id }}</strong>.</p>
+  <div class="stage">
+    <div class="card confirmation-box" role="status" aria-live="polite">
+      <div style="display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style="margin-right:10px;">
+          <circle cx="12" cy="12" r="11" stroke="#16a34a" stroke-width="1.6" fill="#ecfdf5"></circle>
+          <path d="M7.5 12.5l2.5 2.5 6-6" stroke="#16a34a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+
+      <h1>Order Confirmed!</h1>
+      <p>Thank you, <strong>{{ name }}</strong>.</p>
+      <p>You ordered <strong>{{ quantity }}</strong> × <strong>{{ item }}</strong>.</p>
+      <p>Your Order ID is <strong>{{ order_id }}</strong>.</p>
+
+      <a class="link-small" href="{{ url_for('home') }}">Place another order</a>
+    </div>
+  </div>
 </body>
 </html>
