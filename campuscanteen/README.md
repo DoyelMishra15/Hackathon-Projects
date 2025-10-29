@@ -48,8 +48,7 @@ campuscanteen/
 
 | Function | Description |
 |-----------|--------------|
-| `home()` | Renders the main menu (`index.html`) |
-| `order()` | Handles order form submission, generates random Order ID, and displays confirmation page |
+| `order()` | Receives order details (name, item, quantity), generates a random Order ID, and returns a confirmation response in JSON format |
 
 ---
 
@@ -57,44 +56,8 @@ campuscanteen/
 
 | Package | Version | Description |
 |----------|----------|-------------|
-| **Flask** | Latest | Python web framework used for routing and templating |
-
-To install Flask:
-```bash
-python3 -m pip install flask
-```
-▶️ How to Run Locally
-
-1.Clone this repository:
-```bash
-git clone https://github.com/DoyelMishra15/Hackathon-Projects.git
-```
-
-2.Navigate to the project folder:
-```bash
-cd Hackathon-Projects/campuscanteen
-```
-
-3.(Optional) Create a virtual environment:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-4.Install dependencies:
-```bash
-pip install flask
-```
-
-5.Run the application:
-```bash
-python3 app.py
-```
-
-6.Open your browser and visit:
-```bash
-http://127.0.0.1:5000/
-```
+| **Flask** | Latest | Python web framework used to build the backend API |
+| **Flask-CORS** | Latest | Enables cross-origin requests between frontend and backend |
 
 ---
 
