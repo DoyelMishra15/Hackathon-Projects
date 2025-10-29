@@ -13,7 +13,7 @@ export default function OrderForm({ setOrderData }) {
     setLoading(true)
 
     try {
-      const res = await fetch('https://campuscanteen-backend.onrender.com/', {
+      const res = await fetch('https://campuscanteen-backend.onrender.com/order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
