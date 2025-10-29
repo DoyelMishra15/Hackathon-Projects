@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>CampusCanteen</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>CampusCanteen Menu</h1>
-    <form action="/order" method="POST">
-        <label>Name: <input type="text" name="name" required></label><br>
-        <label>Item:
-            <select name="item">
-                <option value="Burger">Burger</option>
-                <option value="Pizza">Pizza</option>
-                <option value="Samosa">Samosa</option>
-                <option value="Chowmein">Chowmein</option>
-            </select>
-        </label><br>
-        <label>Quantity: <input type="number" name="quantity" min="1" required></label><br>
-        <button type="submit">Place Order</button>
-    </form>
+  <div class="stage">
+    <div class="card" role="region" aria-label="Ordering card">
+      <span class="brand">CampusCanteen</span>
+      <div class="subtitle">Fast. Friendly. Fresh.</div>
+
+      <div class="top-pill">Order Box</div>
+
+      <form action="/order" method="POST" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+
+        <div class="field">
+          <label for="item">Item</label>
+          <select id="item" name="item" aria-label="Choose item">
+            <option value="Burger">Burger</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Samosa">Samosa</option>
+            <option value="Chowmein">Chowmein</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="quantity">Quantity</label>
+          <input id="quantity" class="qty" name="quantity" type="number" min="1" value="1" required>
+        </div>
+
+        <button type="submit" class="btn">Place Order</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
