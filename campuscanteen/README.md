@@ -22,18 +22,23 @@ campuscanteen/
 │
 ├── backend/
 │   ├── app.py
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── __pycache__/                
 │
 └── frontend/
+    ├── index.html
     ├── package.json
-    ├── src/
-    │   ├── App.jsx
-    │   ├── components/
-    │   │   ├── OrderForm.jsx
-    │   │   └── Confirmation.jsx
-    │   └── index.css
-    └── public/
-        └── index.html
+    ├── package-lock.json
+    ├── node_modules/               
+    │
+    └── src/
+        ├── main.jsx
+        ├── App.jsx
+        ├── index.css
+        │
+        └── components/
+            ├── OrderForm.jsx
+            └── Confirmation.jsx
 
 ```
 
